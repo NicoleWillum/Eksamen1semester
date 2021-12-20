@@ -34,16 +34,19 @@ body {
     color: white;
     background-image: url(papir.png);
     background-size: cover;
+    min-height: 100vh;
     font-family: acier-bat-gris, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1em;
     margin: 0%;
     padding: 0%;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
-    background: transparent;
+    background: #192793;
     height: 80px;
     width: 100%;
 }
@@ -61,13 +64,25 @@ nav ul li a{
     color: white;
 }
 
-.GRID {
-    position: absolute;
-    width: 100%;
-    transform: translate(0,-50%);
-    top: 25%;
+#toppen ul li a {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-family: acier-bat-solid, sans-serif;
+    font-weight: 400;
+    font-style: normal;;
 }
 
+.footer {
+    position: relative;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+}
 h1 {
     writing-mode: vertical-lr;
     font-size: 5em;
@@ -79,28 +94,28 @@ h1 {
 h2 {
     padding: 20px;
     font-size: 2em;
-    margin-bottom: 30px;
-    font-size: 2vmin;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 2em
 }
 
 h3 {
     text-align: center;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: acier-bat-solid, sans-serif;
     font-weight: 400;
     font-style: normal;;
 }
 
-p {
+h5 {
+    text-align: left;
+    margin-left: 70px;
+    font-size: 1.3em;
     font-family: acier-bat-solid, sans-serif;
     font-weight: 400;
     font-style: normal;;
-    font-size: 1em;
-}
-
-#info p {
-    text-align: center;
+    margin-top: 50px;
 }
 
 footer {
@@ -108,42 +123,124 @@ footer {
     margin-top: 50px ;
 }
 
-#info img{
-height: 300px;
-width: 300px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-padding-bottom: 20px;
+.trebilleder img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
 }
 
-#png1 {
-    grid-area: png1;
+.trebilleder p{
+    text-align: center;
+    padding: 30px;
 }
 
-#png2 {
-    grid-area: png2;
+#navigation {
+    grid-area: navigation;
+    background-color: chartreuse;
 }
 
-#png3 {
-    grid-area: png3;
+#toppen {
+    grid-area: toppen;
+    background-color: transparent;
 }
 
-#info {
-    text-align: left;
+#overskrift {
+    grid-area: overskrift;
+    background-color: aqua;
+}
+
+#kreativitet {
+    grid-area: kreativitet;
+    background-color: #fc0;
+}
+
+#nysgerrighed {
+    grid-area: nysgerrighed;
+    background-color: coral;
+}
+
+#learing {
+    grid-area: learing;
+    background-color: cornflowerblue;
+}
+/* design af tekst sider */ 
+.teksttemplate {
+    background-color: white;
+    background-image: none;
+}
+
+#text {
+    color: black;
+}
+
+#text p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: justify;
+    line-height: 2em;
+}
+#text ul li{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inherit;
+    list-style-type: square;
+    text-align: justify;
+    display: list-item;
+    line-height: 50px;
+    margin-left: 100px;
+}
+
+#text ol li{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inherit;
+    list-style-type: decimal;
+    text-align: justify;
+    display: list-item;
+    line-height: 50px;
+    margin-left: 100px;
+}
+
+#text h4{
+    text-align: center;
+    font-size: 3em;
+}
+
+.billed {
+    max-width: 100%;  
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* design af tekst sider slut */
+
+#Grid {
     display: grid;
     margin-left: 1em;
+    margin-right: 1em;
     grid-gap: 2em;
     grid-template-rows: auto;
     grid-template-areas:
-    "png2"
-    "png1"
-    "png3"
+    "navigation"
+    "toppen"
+    "kreativitet"
+    "learing"
+    "nysgerrighed";
 }
 
 @media screen and (min-width: 700px) {
     body {
-        background-color: #279319;
+        background-color: #192793;
         color: #fc0;
     }
     html, body {
@@ -155,14 +252,14 @@ padding-bottom: 20px;
     }
     nav ul li a{
         color: white;
-        font-size: 2em;
+        font-size: 1.2em;
         text-align: center;
     }
     
 }
 @media screen and (min-width: 1150px) {
         body {
-            background-color: gray;
+            background-color: #192793;
             color: white;
         }
         html, body {
@@ -172,6 +269,26 @@ padding-bottom: 20px;
             padding: 0px;
             overflow-x: hidden;
         }
+        nav ul li a{
+            color: white;
+            font-size: 2em;
+            text-align: center;
+        }
+        #Grid {
+            display: inline-grid;
+            margin-left: 1em;
+            grid-gap: 2em;
+            grid-column: auto;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "navigation navigation navigation"
+            "toppen toppen toppen"
+            "nysgerrighed learing kreativitet"
+            
     }
+}
+
+
+
 
     
