@@ -64,16 +64,9 @@ nav ul li a{
     color: white;
 }
 
-#toppen ul li a {
-    color: white;
-    margin-left: 20px;
-    font-size: 1.5em;
-    font-family: acier-bat-solid, sans-serif;
-    font-weight: 400;
-    font-style: normal;;
-}
 
-.footer {
+
+.footer { /* footer design */ 
     position: relative;
     margin-top: auto;
     left: 0;
@@ -83,25 +76,26 @@ nav ul li a{
     color: black;
     text-align: center;
 }
+/* overskrifter design */ 
 h1 {
     writing-mode: vertical-lr;
     font-size: 5em;
     font-family: acier-bat-gris, sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #f2b127;
 }
 
 h2 {
     padding: 20px;
-    font-size: 2em;
     margin-bottom: 50px;
     margin-top: 30px;
-    font-size: 2em
+    font-size: 3em;
 }
 
 h3 {
     text-align: center;
-    padding: 20px;
+    padding-top: 20px;
     font-size: 2em;
     font-family: acier-bat-solid, sans-serif;
     font-weight: 400;
@@ -117,13 +111,19 @@ h5 {
     font-style: normal;;
     margin-top: 50px;
 }
+/* overskrifter slut */ 
 
-footer {
-    padding: 20px;
-    margin-top: 50px ;
+
+/* Grid elementer */ 
+#toppen {
+    grid-area: toppen;
 }
 
-.trebilleder img{
+
+#kreativitet {
+    grid-area: kreativitet;
+}
+#kreativitet img{
     height: 300px;
     width: 300px;
     display: block;
@@ -131,41 +131,52 @@ footer {
     margin-right: auto;
     padding-bottom: 20px;
 }
-
-.trebilleder p{
+#kreativitet p {
     text-align: center;
     padding: 30px;
+    font-family: acier-bat-solid, sans-serif; 
+    font-size: 1.5em;
 }
 
-#navigation {
-    grid-area: navigation;
-    background-color: chartreuse;
-}
-
-#toppen {
-    grid-area: toppen;
-    background-color: transparent;
-}
-
-#overskrift {
-    grid-area: overskrift;
-    background-color: aqua;
-}
-
-#kreativitet {
-    grid-area: kreativitet;
-    background-color: #fc0;
-}
 
 #nysgerrighed {
     grid-area: nysgerrighed;
-    background-color: coral;
+}
+#nysgerrighed img {
+   height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+#nysgerrighed p {
+    text-align: center;
+    padding: 30px; 
+    font-family: acier-bat-solid, sans-serif;
+    font-size: 1.5em;
 }
 
 #learing {
     grid-area: learing;
-    background-color: cornflowerblue;
 }
+#learing img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    
+}
+#learing p{
+    text-align: center;
+    padding: 30px; 
+    font-family: acier-bat-solid, sans-serif;
+    font-size: 1.5em;
+}
+/* Grid elementer slut*/ 
+
 /* design af tekst sider */ 
 .teksttemplate {
     background-color: white;
@@ -241,7 +252,7 @@ footer {
 @media screen and (min-width: 700px) {
     body {
         background-color: #192793;
-        color: #fc0;
+        color: white;
     }
     html, body {
         width: 100%;
@@ -254,6 +265,19 @@ footer {
         color: white;
         font-size: 1.2em;
         text-align: center;
+    }
+    #Grid {
+        display: grid;
+        margin-left: 1em;
+        margin-right: 1em;
+        grid-gap: 2em;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "navigation"
+        "toppen"
+        "kreativitet"
+        "learing"
+        "nysgerrighed";
     }
     
 }
@@ -277,17 +301,18 @@ footer {
         #Grid {
             display: inline-grid;
             margin-left: 1em;
+            margin-right: 1em;
             grid-gap: 2em;
-            grid-column: auto;
-            grid-template-rows: auto;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas:
-            "navigation navigation navigation"
             "toppen toppen toppen"
-            "nysgerrighed learing kreativitet"
-            
-    }
+            "kreativitet learing nysgerrighed";
+        }
 }
 
+
+/*  */ 
 
 
 
