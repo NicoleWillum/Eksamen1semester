@@ -2,7 +2,7 @@
 <html lang="da" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Cssgridsystem</title>
+        <title>Css gridsystem</title>
         <link rel="stylesheet" href="Stylesheet.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://use.typekit.net/prq1fgw.css">
@@ -21,15 +21,27 @@
             </nav>
             </section>
             <section id="text">
-                <h4>Hvad er CSS gridsystem?</h4>
+                <h4>CSS gridsystem</h4>
                 <p>CSS gridsystem er den nyeste specifikation i CSS, og omtales som det mest revolutionerende siden responsivt webdesign. Grid model bygger delvist på flexbox og er nu understøttet i alle browsere. Grids gør det meget nemmer at placere elementer i CSS og gør mulighederne for design mange. Med grids kan du nemt sætte dine op i elementer rækker og koloner og indenfor de felter kan du nemt rykker rundt på felterne.</p>
                 <img class="billed" src="grids.png" alt="grids">
-                <h3>Hvordan det virker</h3>
+                <h5>Hvordan det virker</h5>
                 <p>For at kunne oprette et grid skal man i sin html sørge for at dele sine elementer ind i forkellige sektioner, ved at give dem et id eller en class. Når de forskellige felter har fået et id, skal man i sin css definere de forskellige elementer og give dem et navn.</p>
                 <p>I undervisningen har vi arbejdet med at lave CSS grids. Her ses et simpelt layout, med 8 felter der hver er blevet givet et id.</p>
                 <img class="billed" src="gridseksempel.png" alt="grids">
                 <p>Efter man har inddelt sin HTML i de forskellige sektioner man ønsker at sætte i grid, skal man i sin CSS ind og definere de forskellige id'er ved at gøre dem til container-elementer. Dette har ikke endnu nogen påvirkning på layoutet, men er et vigtigt trin i at opsætte sit grid.</p>
                 <img class="billed" src="grid.png" alt="grid">
-                <p>Efter vi har defineret de forskellige elementer kan vi sætte vores grid op.</p>
+                <p>Efter vi har defineret de forskellige elementer kan vi sætte vores grid op. Der findes to måder hvorpå man kan bruge CSS grid. Den først metode minde om flexbox. Her styrer man fordelingen ved at angive den på hvert element, denne metode er tung at ændre i. I den anden metode styrer man fordelingen på forældreelementet, denne metode kræver navngivning.</p>
+                <h5>Forskellige selectors og deres betydning</h5>
+                <ul>
+                    <li><strong>gridtemplate-columns</strong> angiver kolonner</li>
+                    <li><strong>Enheden "fr"</strong> betyder fractions, bruges til at angive hvor mange dele man vil dele sit grid op i og hvor store delene skal være</li>
+                    <li><strong>grid-template-rows</strong> angiver rækker(Østergaard, 2021)</li>
+                </ul>
             </section>
     </body>
+    <footer class="footer">
+        <p>Nicole Bolette Willumsen</p>
+        <p>mail: nicole.willumsen@gmail.com</p>
+        <p>tlf: 42223674</p>
+    </footer>
+</html>

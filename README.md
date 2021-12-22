@@ -6,3 +6,5 @@ Jeg har fokus på at få lavet et godt stylesheet, så det er nemt at sætte res
 
 
 Fandt ud af og få sat mit gridt op efter lang tids besvær:)
+
+Færdig med kommunikations afsnittet

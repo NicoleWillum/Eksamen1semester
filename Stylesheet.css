@@ -44,7 +44,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+/* Navigationsbar */ 
 nav {
     background: #192793;
     height: 80px;
@@ -62,9 +62,37 @@ nav ul li{
 }
 nav ul li a{
     color: white;
+    padding-bottom: 100px;
 }
 
 
+#Emner ul li a { /* Emner på undersiderne */
+    line-height: 50px;
+    margin-left: 20px;
+    color: #f2b127;
+    font-family: acier-bat-solid, sans-serif;
+    text-decoration: overline;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+#liste1 {
+    grid-area: liste1;
+}
+    
+#liste2 {
+        grid-area: liste2;
+}
+    
+#Emner {
+        display: grid;
+        margin-left: 1em;
+        margin-right: 1em;
+        grid-gap: 2em;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "liste1"
+        "liste2";
+}
 
 .footer { /* footer design */ 
     position: relative;
@@ -73,11 +101,12 @@ nav ul li a{
     bottom: 0;
     width: 100%;
     background-color: transparent;
+    font-family: acier-bat-solid, sans-serif;
     color: black;
     text-align: center;
 }
-/* overskrifter design */ 
-h1 {
+
+h1 {/* overskrifter design */ 
     writing-mode: vertical-lr;
     font-size: 5em;
     font-family: acier-bat-gris, sans-serif;
@@ -110,8 +139,8 @@ h5 {
     font-weight: 400;
     font-style: normal;;
     margin-top: 50px;
-}
-/* overskrifter slut */ 
+}/* overskrifter slut */
+ 
 
 
 /* Grid elementer */ 
@@ -137,7 +166,6 @@ h5 {
     font-family: acier-bat-solid, sans-serif; 
     font-size: 1.5em;
 }
-
 
 #nysgerrighed {
     grid-area: nysgerrighed;
@@ -205,6 +233,7 @@ h5 {
     display: list-item;
     line-height: 50px;
     margin-left: 100px;
+    margin-right: 100px;
 }
 
 #text ol li{
@@ -231,8 +260,6 @@ h5 {
     margin-right: auto;
 }
 
-
-
 /* design af tekst sider slut */
 
 #Grid {
@@ -249,7 +276,7 @@ h5 {
     "nysgerrighed";
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) {/* tabelt */ 
     body {
         background-color: #192793;
         color: white;
@@ -279,9 +306,26 @@ h5 {
         "learing"
         "nysgerrighed";
     }
-    
-}
-@media screen and (min-width: 1150px) {
+    #liste1 {
+        grid-area: liste1;
+        }
+        
+        #liste2 {
+            grid-area: liste2;
+        }
+        
+        #Emner {
+            display: grid;
+            margin-left: 1em;
+            margin-right: 1em;
+            grid-gap: 2em;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "liste1 liste2";
+        }
+}/* Media screen færdig */
+
+@media screen and (min-width: 1150px) {/* computer */ 
         body {
             background-color: #192793;
             color: white;
@@ -309,7 +353,31 @@ h5 {
             "toppen toppen toppen"
             "kreativitet learing nysgerrighed";
         }
-}
+        #liste1 {
+            grid-area: liste1;
+            }
+            
+            #liste2 {
+                grid-area: liste2;
+            }
+            
+            #Emner {
+                display: grid;
+                margin-left: 1em;
+                margin-right: 1em;
+                grid-gap: 2em;
+                grid-template-rows: auto;
+                grid-template-areas:
+                "liste1 liste2";
+            }
+            h2 {
+                padding: 20px;
+                margin-bottom: 100px;
+                margin-top: 50px;
+                font-size: 3em;
+            }
+ 
+}/* Media screen færdig */
 
 
 /*  */ 
